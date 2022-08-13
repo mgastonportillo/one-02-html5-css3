@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'PT Serif', serif;
+}
+
+header {
+    position: relative;
+}
+
+header a:link, a:visited,  a:hover, a:active {
+    color: white;
+    text-decoration: none;
+}
+
+#banner {
+    position: absolute;
+    background-image: url("/assets/img/banner.png");
+    height: 33vh;
+    width: 100%;
+    filter: blur(2px) brightness(50%);
+    -webkit-filter: blur(2px) brightness(50%);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#headerReal {
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 33vh;
+    max-width: 90%;
+    margin: 0 auto;
+    position: relative;
+}
+
+#headerReal img {
+    max-height: 28vh;
+}
+
+.botonesHeader {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.botonesHeader li {
+    transition: all .3s ease-in-out;
+    margin: 0 10px;
+}
+
+.botonesHeader li:hover {
+    transition: .2s;
+    transform: scale(1.1);
+}
+
+.botonesHeader li a {
+    position: relative;
+    display: inline-block;
+    color: white;
+    overflow: hidden;
+    transition: all .2s ease-in-out;
+}
+
+.botonesHeader li a::before {
+    position: absolute;
+    content: attr(data-content);
+    background: -webkit-linear-gradient(#c39634, #cca352, #fde6b8, #fef3dc);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    clip-path: polygon(0 0, 0 0, 0% 100%, 0 100%);
+    transition: clip-path 275ms ease;
+}
+
+.botonesHeader li a:hover::before {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.acercaDe {
+    background: -webkit-linear-gradient(#CCCCCC, #d0d0d0, #e4e4e4);
+    padding: 35px;
+}
+
+.acercaDe p {
+    text-align: center;
+    padding: 20px;
+    max-width: 90%;
+    margin: auto;
+}
+
+.acercaDe hr {
+    color: darkgray;
+    margin: auto;
+    max-width: 40%;
+}
+
+.diferenciales {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    padding: 35px;
+}
+
+#difContenido {
+    padding: 25px 0 10px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.imgDiferenciales {
+    object-fit: cover;
+    border-radius: 20px;
+    max-width: 45%;
+}
+
+.encabezado {text-align: center;}
+
+.diferenciales ul {
+    font-size: medium;
+    vertical-align: top;
+    width: 45%;
+}
+
+.mision {font-size: 20px;}
+
+.items {font-style: italic;}
+
+footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    background: #141313;
+}
+
+footer span {
+    color: white;
+    font-size: smaller;
+    font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+}
+
+footer img {
+    margin: 0 6px 0 6px;
+    height: 20px;
+    max-height: 20px;
+    max-width: auto;
+}
+
+.filter-white {
+    filter: invert(100%) sepia(7%) saturate(4376%) hue-rotate(230deg) brightness(104%) contrast(106%);
+    -webkit-filter: invert(100%) sepia(7%) saturate(4376%) hue-rotate(230deg) brightness(104%) contrast(106%);
+}
+
+@media screen and (max-width: 700px) {
+    .botonesHeader {
+        flex-direction: column;
+    }
+
+    .botonesHeader li {
+        font-size: 1.5rem;
+    }
+}
