@@ -39,6 +39,7 @@ header a:link, a:visited,  a:hover, a:active {
     max-width: 90%;
     margin: 0 auto;
     position: relative;
+    
 }
 
 #header-real img {
@@ -162,13 +163,12 @@ header a:link, a:visited,  a:hover, a:active {
     padding: 6px 12px;
     border: none;
     background: url(/assets/img/bg.jpg);
-    color: #f2f2f2;
+    color: white;
     border-radius: 2px;
     font-size: large;
     font-weight: bold;
     position: relative;
     display: inline-block;
-    color: white;
     overflow: hidden;
     transition: all .2s ease-in-out;
 }
@@ -334,6 +334,11 @@ footer img {
 }
 
 @media screen and (max-width: 700px) {
+    #banner {
+        filter: blur(2px) brightness(45%);
+        -webkit-filter: blur(2px) brightness(45%);
+    }
+
     .botones-header {
         flex-direction: column;
     }
