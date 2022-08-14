@@ -8,6 +8,9 @@
 
 header {
     position: relative;
+    -webkit-user-select: none;       
+    -moz-user-select: none;
+    user-select: none;
 }
 
 header a:link, a:visited,  a:hover, a:active {
@@ -17,7 +20,7 @@ header a:link, a:visited,  a:hover, a:active {
 
 #banner {
     position: absolute;
-    background-image: url("/assets/img/banner.png");
+    background-image: url("/assets/img/banner.webp");
     height: 33vh;
     width: 100%;
     filter: blur(2px) brightness(50%);
@@ -39,6 +42,7 @@ header a:link, a:visited,  a:hover, a:active {
 }
 
 #headerReal img {
+    height: 250px;
     max-height: 28vh;
 }
 
@@ -101,6 +105,14 @@ header a:link, a:visited,  a:hover, a:active {
     max-width: 40%;
 }
 
+.formulario {
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
 .contenedor {
     padding-top: 0px;
     display: flex;
@@ -135,6 +147,9 @@ header a:link, a:visited,  a:hover, a:active {
     border: solid 2px black;
     border-radius: 32px;
     transition: all .3s ease-in-out;
+    -webkit-user-select: none;       
+    -moz-user-select: none;
+    user-select: none;
 }
 
 .producto:hover {
@@ -147,6 +162,11 @@ header a:link, a:visited,  a:hover, a:active {
     padding-bottom: 10px;
     text-align: center;
     max-width: 90%;
+}
+
+.producto img {
+    height: 250px;
+    max-height: auto;
 }
 
 .diferenciales {
@@ -192,6 +212,9 @@ footer {
     background: url(/assets/img/bg.jpg);
     background-repeat: repeat;
     background-size: 100px;
+    -webkit-user-select: none;       
+    -moz-user-select: none;
+    user-select: none;
 }
 
 footer span {
