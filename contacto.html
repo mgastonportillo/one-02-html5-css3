@@ -21,20 +21,40 @@
         </div>
     </header>
 
-    <form class="formulario">
-        <h2 class="encabezado">Contacto</h1>
-        <label for="name1">Name 1</label>
-        <input type="text" name="name1" id="name1" placeholder="name1">
-        <label for="name1">Name 1</label>
-        <input type="text" name="name1" id="name1" placeholder="name1">
-        <label for="name1">Name 1</label>
-        <input type="text" name="name1" id="name1" placeholder="name1">
-        <button>Botón</button>
-    </form>
+    <div class="formulario">
+        <h2>Contacto</h2>
+        <form action="">
+                <ul class="contenedor-flex">
+                    <li>
+                        <label for="nombre-apellido">Nombre y apellido</label>
+                        <input type="text" name="nombre-apellido" id="nombre-apellido" placeholder="Ingrese su nombre y su apellido">
+                        <br>
+                    </li>
+                    <li>
+                        <label for="email">Correo electrónico</label>
+                        <input type="text" name="email" id="email" placeholder="Ingrese su dirección de email">
+                        <br>
+                    </li>
+                    <li>
+                        <label for="telefono">Teléfono</label>
+                        <input type="text" name="telefono" id="telefono" placeholder="Ingrese su número de teléfono">
+                        <br>
+                    </li>
+                    <li>
+                        <label for="mensaje">Mensaje</label>
+                        <textarea type="text" name="mensaje" id="mensaje" rows="6" placeholder="Ingrese su mensaje"></textarea> 
+                        <br>
+                    </li>
+                    <li>
+                        <button type="submit" data-content="Enviar">Enviar</button>
+                    </li>
+                </ul>
+        </form>
+    </div>
 
     <footer>
         <img src="/assets/img/gale.svg" class="filter-white" alt="gale">
-        <span>Creado por © 2022 gale, para el curso "Oracle Next Education"</span>
+        <span>© 2022 gale, para el curso "Oracle Next Education"</span>
     </footer>
     
 </body>

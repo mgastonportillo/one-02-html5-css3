@@ -3,7 +3,7 @@
 * {
     margin: 0;
     box-sizing: border-box;
-    font-family: 'PT Serif', serif;
+    font-family: 'PT Serif', serif !important;
 }
 
 header {
@@ -87,6 +87,7 @@ header a:link, a:visited,  a:hover, a:active {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 
+
 .acercaDe {
     background: -webkit-linear-gradient(#CCCCCC, #d0d0d0, #e4e4e4);
     padding: 35px;
@@ -106,15 +107,96 @@ header a:link, a:visited,  a:hover, a:active {
 }
 
 .formulario {
-    padding: 35px;
     display: flex;
     flex-direction: column;
+    width: 80%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.formulario h2 {
+    margin: 0 auto;
+    padding-top: 35px;
+}
+
+.contenedor-flex {
+    list-style-type: none;
+    padding: 0;
+    max-width: 800px;
+    margin: 35px auto;
+    position: relative;
+}
+
+.contenedor-flex li {
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.contenedor-flex li label {
+    padding: 8px;
+}
+
+.contenedor-flex > li > label {
+    flex: 1 0 160px;
+    max-width: 220px;
+}
+
+.contenedor-flex > li > label + * {
+    flex: 1 0 220px;
+}
+
+.contenedor-flex li input,
+.contenedor-flex li textarea {
+    font-size: small;
+    padding: 15px;
     max-width: 90%;
     margin: 0 auto;
 }
 
-.contenedor {
-    padding-top: 0px;
+.contenedor-flex li button {
+    cursor: pointer;
+    margin-left: auto;
+    margin-top: 10px;
+    padding: 6px 12px;
+    border: none;
+    background: url(/assets/img/bg.jpg);
+    color: #f2f2f2;
+    border-radius: 2px;
+    font-size: large;
+    font-weight: bold;
+}
+
+.contenedor-flex li button:hover {
+    transition: .2s;
+    transform: scale(1.1);
+}
+
+.contenedor-flex li button {
+    position: relative;
+    display: inline-block;
+    color: white;
+    overflow: hidden;
+    transition: all .2s ease-in-out;
+}
+
+.contenedor-flex li button::before {
+    position: absolute;
+    content: attr(data-content);
+    background: -webkit-linear-gradient(#c39634, #cca352, #fde6b8, #fef3dc);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    clip-path: polygon(0 0, 0 0, 0% 100%, 0 100%);
+    transition: clip-path 275ms ease;
+}
+
+.contenedor-flex li button:hover::before {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.contenedor-productos {
     display: flex;
     flex-direction: column;
     align-items: center;
