@@ -7,6 +7,7 @@
 }
 
 header {
+    background: black;
     position: relative;
     -webkit-user-select: none;       
     -moz-user-select: none;
@@ -18,10 +19,8 @@ header a:link, a:visited,  a:hover, a:active {
     text-decoration: none;
 }
 
-#banner {
+#img-header {
     position: absolute;
-    background: black;
-    background-image: url("/assets/img/banner.webp");
     height: 33vh;
     width: 100%;
     filter: blur(2px) brightness(50%);
@@ -40,7 +39,6 @@ header a:link, a:visited,  a:hover, a:active {
     max-width: 90%;
     margin: 0 auto;
     position: relative;
-    
 }
 
 #header-real img {
@@ -61,7 +59,7 @@ header a:link, a:visited,  a:hover, a:active {
     margin: 0 10px;
 }
 
-.botones-header li:hover {
+.botones-header li a:hover {
     transition: .2s;
     transform: scale(1.1);
 }
@@ -72,6 +70,23 @@ header a:link, a:visited,  a:hover, a:active {
     color: white;
     overflow: hidden;
     transition: all .2s ease-in-out;
+}
+
+.botones-header li a::after {
+    content: '';
+    display: block;
+    margin: auto;
+    border-radius: 2px;
+    margin-top: 1px;
+    height: 2px;
+    width: 0px;
+    background: transparent;
+    transition: width .5s ease, background-color .5s ease;
+}
+
+.botones-header li > a:hover::after {
+    width: 85%;
+    background: -webkit-linear-gradient(#c39634, #cca352, #fde6b8, #fef3dc);
 }
 
 .botones-header li a::before {
@@ -206,7 +221,7 @@ label {
     margin-left: auto;
     padding: 6px 12px;
     border: none;
-    background: url(/assets/img/bg.jpg);
+    background: black;
     color: white;
     border-radius: 2px;
     font-size: large;
@@ -369,6 +384,14 @@ footer img {
         text-align: center;
         padding: 20px 0;
         max-width: 80%;
+    }
+
+    .botones-header li a::after {
+        margin: 0 0 0 10px;
+    }
+
+    .botones-header li > a:hover::after {
+        width: 47px;
     }
 }
 
