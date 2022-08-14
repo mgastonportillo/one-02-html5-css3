@@ -20,6 +20,7 @@ header a:link, a:visited,  a:hover, a:active {
 
 #banner {
     position: absolute;
+    background: black;
     background-image: url("/assets/img/banner.webp");
     height: 33vh;
     width: 100%;
@@ -43,7 +44,7 @@ header a:link, a:visited,  a:hover, a:active {
 }
 
 #header-real img {
-    height: 250px;
+    height: 150px;
     max-height: 28vh;
 }
 
@@ -88,7 +89,6 @@ header a:link, a:visited,  a:hover, a:active {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 
-
 .acerca-de {
     background: -webkit-linear-gradient(#CCCCCC, #d0d0d0, #e4e4e4);
     padding: 35px;
@@ -107,6 +107,43 @@ header a:link, a:visited,  a:hover, a:active {
     max-width: 40%;
 }
 
+.diferenciales {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    padding: 35px;
+}
+
+#diferenciales-contenido {
+    padding: 25px 0 10px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.img-diferenciales {
+    object-fit: cover;
+    border-radius: 20px;
+    max-width: 45%;
+}
+
+.encabezado {
+    text-align: center;
+}
+
+.diferenciales ul {
+    font-size: medium;
+    vertical-align: top;
+    width: 45%;
+}
+
+.mision {
+    font-size: 20px;
+}
+
+.items {
+    font-style: italic;
+}
+
 .formulario {
     display: flex;
     flex-direction: column;
@@ -118,6 +155,12 @@ header a:link, a:visited,  a:hover, a:active {
 .formulario h2 {
     margin: 0 auto;
     padding-top: 35px;
+}
+
+label {
+    -webkit-user-select: none;       
+    -moz-user-select: none;
+    user-select: none;
 }
 
 .contenedor-entradas {
@@ -136,21 +179,22 @@ header a:link, a:visited,  a:hover, a:active {
 }
 
 .contenedor-entradas li label {
+    font-weight: bold;
     padding: 8px;
 }
 
 .contenedor-entradas > li > label {
     flex: 1 0 160px;
-    max-width: 220px;
+    max-width: 250px;
 }
 
 .contenedor-entradas > li > label + * {
-    flex: 1 0 220px;
+    flex: 1 0 250px;
 }
 
 .contenedor-entradas li input,
 .contenedor-entradas li textarea {
-    font-size: small;
+    font-size: medium;
     padding: 15px;
     max-width: 90%;
     margin: 0 auto;
@@ -267,37 +311,6 @@ header a:link, a:visited,  a:hover, a:active {
     height: 250px;
     max-height: auto;
 }
-
-.diferenciales {
-    display: flex;
-    flex-direction: column;
-    background: white;
-    padding: 35px;
-}
-
-#diferenciales-contenido {
-    padding: 25px 0 10px 0;
-    display: flex;
-    justify-content: center;
-}
-
-.img-diferenciales {
-    object-fit: cover;
-    border-radius: 20px;
-    max-width: 45%;
-}
-
-.encabezado {text-align: center;}
-
-.diferenciales ul {
-    font-size: medium;
-    vertical-align: top;
-    width: 45%;
-}
-
-.mision {font-size: 20px;}
-
-.items {font-style: italic;}
 
 footer {
     display: flex;
