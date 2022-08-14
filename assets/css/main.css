@@ -30,7 +30,7 @@ header a:link, a:visited,  a:hover, a:active {
     background-size: cover;
 }
 
-#headerReal {
+#header-real {
     color: white;
     display: flex;
     align-items: center;
@@ -41,12 +41,12 @@ header a:link, a:visited,  a:hover, a:active {
     position: relative;
 }
 
-#headerReal img {
+#header-real img {
     height: 250px;
     max-height: 28vh;
 }
 
-.botonesHeader {
+.botones-header {
     display: flex;
     flex-direction: row;
     list-style-type: none;
@@ -54,17 +54,17 @@ header a:link, a:visited,  a:hover, a:active {
     font-weight: bold;
 }
 
-.botonesHeader li {
+.botones-header li {
     transition: all .3s ease-in-out;
     margin: 0 10px;
 }
 
-.botonesHeader li:hover {
+.botones-header li:hover {
     transition: .2s;
     transform: scale(1.1);
 }
 
-.botonesHeader li a {
+.botones-header li a {
     position: relative;
     display: inline-block;
     color: white;
@@ -72,7 +72,7 @@ header a:link, a:visited,  a:hover, a:active {
     transition: all .2s ease-in-out;
 }
 
-.botonesHeader li a::before {
+.botones-header li a::before {
     position: absolute;
     content: attr(data-content);
     background: -webkit-linear-gradient(#c39634, #cca352, #fde6b8, #fef3dc);
@@ -83,24 +83,24 @@ header a:link, a:visited,  a:hover, a:active {
     transition: clip-path 275ms ease;
 }
 
-.botonesHeader li a:hover::before {
+.botones-header li a:hover::before {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 
 
-.acercaDe {
+.acerca-de {
     background: -webkit-linear-gradient(#CCCCCC, #d0d0d0, #e4e4e4);
     padding: 35px;
 }
 
-.acercaDe p {
+.acerca-de p {
     text-align: center;
     padding: 20px;
     max-width: 80%;
     margin: auto;
 }
 
-.acercaDe hr {
+.acerca-de hr {
     color: darkgray;
     margin: auto;
     max-width: 40%;
@@ -119,46 +119,46 @@ header a:link, a:visited,  a:hover, a:active {
     padding-top: 35px;
 }
 
-.contenedor-flex {
+.contenedor-entradas {
     list-style-type: none;
     padding: 0;
     max-width: 800px;
-    margin: 35px auto;
+    margin: 35px auto 0 auto;
     position: relative;
 }
 
-.contenedor-flex li {
+.contenedor-entradas li {
     padding: 5px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
 }
 
-.contenedor-flex li label {
+.contenedor-entradas li label {
     padding: 8px;
 }
 
-.contenedor-flex > li > label {
+.contenedor-entradas > li > label {
     flex: 1 0 160px;
     max-width: 220px;
 }
 
-.contenedor-flex > li > label + * {
+.contenedor-entradas > li > label + * {
     flex: 1 0 220px;
 }
 
-.contenedor-flex li input,
-.contenedor-flex li textarea {
+.contenedor-entradas li input,
+.contenedor-entradas li textarea {
     font-size: small;
     padding: 15px;
     max-width: 90%;
     margin: 0 auto;
 }
 
-.contenedor-flex li button {
+.entradas-bottom button {
     cursor: pointer;
+    margin: 16px 6px 0 0;
     margin-left: auto;
-    margin-top: 10px;
     padding: 6px 12px;
     border: none;
     background: url(/assets/img/bg.jpg);
@@ -166,14 +166,6 @@ header a:link, a:visited,  a:hover, a:active {
     border-radius: 2px;
     font-size: large;
     font-weight: bold;
-}
-
-.contenedor-flex li button:hover {
-    transition: .2s;
-    transform: scale(1.1);
-}
-
-.contenedor-flex li button {
     position: relative;
     display: inline-block;
     color: white;
@@ -181,7 +173,12 @@ header a:link, a:visited,  a:hover, a:active {
     transition: all .2s ease-in-out;
 }
 
-.contenedor-flex li button::before {
+.entradas-bottom button:hover {
+    transition: .2s;
+    transform: scale(1.1);
+}
+
+.entradas-bottom button::before {
     position: absolute;
     content: attr(data-content);
     background: -webkit-linear-gradient(#c39634, #cca352, #fde6b8, #fef3dc);
@@ -192,8 +189,28 @@ header a:link, a:visited,  a:hover, a:active {
     transition: clip-path 275ms ease;
 }
 
-.contenedor-flex li button:hover::before {
+.entradas-bottom button:hover::before {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.entradas-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    list-style-type: none;
+    max-width: 790px;
+    margin: 10px auto 35px auto;
+}
+
+#nl-flex {
+    display: flex;
+    max-width: 85%;
+    margin: 0 auto;
+
+}
+
+#nl-label {
+    margin-right: 15px;
 }
 
 .contenedor-productos {
@@ -206,7 +223,7 @@ header a:link, a:visited,  a:hover, a:active {
     margin: auto;
 }
 
-.listaProductos {
+.lista-productos {
     margin: 35px 0 10px 0;
     display: flex;
     align-items: center;
@@ -258,13 +275,13 @@ header a:link, a:visited,  a:hover, a:active {
     padding: 35px;
 }
 
-#difContenido {
+#diferenciales-contenido {
     padding: 25px 0 10px 0;
     display: flex;
     justify-content: center;
 }
 
-.imgDiferenciales {
+.img-diferenciales {
     object-fit: cover;
     border-radius: 20px;
     max-width: 45%;
@@ -317,22 +334,28 @@ footer img {
 }
 
 @media screen and (max-width: 700px) {
-    .botonesHeader {
+    .botones-header {
         flex-direction: column;
     }
 
-    .botonesHeader li {
+    .botones-header li {
         font-size: 1.5rem;
     }
 
-    .acercaDe {
+    .acerca-de {
         background: -webkit-linear-gradient(#CCCCCC, #d0d0d0, #e4e4e4);
         padding: 35px 0;
     }
     
-    .acercaDe p {
+    .acerca-de p {
         text-align: center;
         padding: 20px 0;
         max-width: 80%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .entradas-bottom button {
+        margin: 16px 20px 0 0;
     }
 }

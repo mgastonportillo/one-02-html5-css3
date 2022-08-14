@@ -11,9 +11,9 @@
 
     <header>
         <div id="banner"></div>
-        <div id="headerReal">
+        <div id="header-real">
             <img src="/assets/img/logo-blanco.svg" alt="Logo">
-            <ul class="botonesHeader">
+            <ul class="botones-header">
                 <li><a href="index.html" data-content="Home">Home</a></li>
                 <li><a href="productos.html" data-content="Productos">Productos</a></li>
                 <li><a href="contacto.html" data-content="Contacto">Contacto</a></li>
@@ -24,31 +24,31 @@
     <div class="formulario">
         <h2>Contacto</h2>
         <form action="">
-                <ul class="contenedor-flex">
+                <ul class="contenedor-entradas">
                     <li>
                         <label for="nombre-apellido">Nombre y apellido</label>
                         <input type="text" name="nombre-apellido" id="nombre-apellido" placeholder="Ingrese su nombre y su apellido">
-                        <br>
                     </li>
                     <li>
                         <label for="email">Correo electrónico</label>
                         <input type="text" name="email" id="email" placeholder="Ingrese su dirección de email">
-                        <br>
                     </li>
                     <li>
                         <label for="telefono">Teléfono</label>
                         <input type="text" name="telefono" id="telefono" placeholder="Ingrese su número de teléfono">
-                        <br>
                     </li>
                     <li>
                         <label for="mensaje">Mensaje</label>
                         <textarea type="text" name="mensaje" id="mensaje" rows="6" placeholder="Ingrese su mensaje"></textarea> 
-                        <br>
-                    </li>
-                    <li>
-                        <button type="submit" data-content="Enviar">Enviar</button>
                     </li>
                 </ul>
+                <div class="entradas-bottom">
+                    <div id="nl-flex">
+                        <label for="newsletter" id="nl-label">¿Le gustaría recibir noticias sobre la barbería?</label>
+                        <input type="checkbox" name="newsletter" id="newsletter"></checkbox> 
+                    </div>
+                    <button type="submit" data-content="Enviar">Enviar</button>
+                </div>
         </form>
     </div>
 
