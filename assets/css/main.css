@@ -182,23 +182,27 @@ header a:link, a:visited,  a:hover, a:active {
 
 footer {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     padding: 25px;
-    background: #141313;
+    height: 33vh;
+    width: 100%;
+    background: url(/assets/img/bg.jpg);
+    background-repeat: repeat;
+    background-size: 100px;
 }
 
 footer span {
+    text-align: center;
     color: white;
     font-size: smaller;
     font-family: Verdana, Geneva, Tahoma, sans-serif !important;
 }
 
 footer img {
-    margin: 0 6px 0 6px;
-    height: 20px;
-    max-height: 20px;
+    height: 13vh;
     max-width: auto;
 }
 
