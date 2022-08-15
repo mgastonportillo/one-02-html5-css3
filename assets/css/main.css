@@ -1,4 +1,4 @@
-/* Globales */
+/* GLOBALES */
 @import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 * {
@@ -105,13 +105,14 @@ header a:link, a:visited,  a:hover, a:active {
     text-decoration: none;
 }
 
-.acerca-de h2,
-.diferenciales h2,
-.formulario h2,
-.contenedor-productos h2,
-.horarios h2 {
+.titulo-principal {
+    position: relative;
     text-align: center;
     margin: 0 auto;
+}
+
+section {
+    padding: 50px;
 }
 
 label {
@@ -149,30 +150,35 @@ footer > img {
     max-width: auto;
 }
 
-/* Parches y filtros */
+/* "PARCHES" O "HACKS" */
 .filter-white {
     -webkit-filter: invert(100%) sepia(7%) saturate(4376%) hue-rotate(230deg) brightness(104%) contrast(106%);
     filter: invert(100%) sepia(7%) saturate(4376%) hue-rotate(230deg) brightness(104%) contrast(106%);
 }
 
-/* ACERCA DE */
+/* HOME */
 .acerca-de {
-    direction: ltr;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     background: -webkit-linear-gradient(#cccccc, #e7e7e7, #cccccc);
     background: linear-gradient(#cccccc, #e7e7e7, #cccccc);
-    padding: 35px 35px 25px 35px;
 }
 
-.acerca-de > p {
+.acerca-de > div {
+    width: auto;
+    max-width: 61%;
+    padding: 30px 0 10px 0;
+}
+
+.acerca-de > div > p {
     text-align: center;
-    padding: 20px;
-    max-width: 80%;
     margin: auto;
 }
 
-.acerca-de > hr {
+.acerca-de > div > hr {
     color: darkgray;
-    margin: auto;
+    margin: 30px auto;
     max-width: 40%;
 }
 
@@ -180,30 +186,76 @@ footer > img {
     font-size: 20px;
 }
 
+.mapa {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.mapa > p {
+    text-align: center;
+    color: #4d4d4d;
+    padding-top: 20px;
+}
+
+.mapa > iframe {
+    min-width: 60%;
+    max-width: 100%;
+    border: 2px solid #cccccc;
+    border-radius: 15px;
+    margin-top: 35px;
+    margin-bottom: 10px;
+}
+
 .diferenciales {
     display: flex;
     flex-direction: column;
-    background: white;
-    padding: 35px;
+    background: -webkit-linear-gradient(#cccccc, #e7e7e7, #cccccc);
+    background: linear-gradient(#cccccc, #e7e7e7, #cccccc);
+
 }
 
 .diferenciales > div {
+    min-width: 600px;
+    max-width: 60%;
+    margin: 0 auto;
     padding: 35px 0 10px 0;
     display: flex;
-    justify-content: center;
 }
 
 .diferenciales > div > img {
+    max-width: 50%;
     object-fit: cover;
     border-radius: 20px;
-    max-width: 45%;
+    box-shadow: rgba(0, 0, 0, 0.7);
 }
 
 .diferenciales > div > ul {
+    padding-left: 50px;
+    margin: auto 0;
+    max-width: 50%;
     font-size: medium;
     vertical-align: top;
     font-style: italic;
-    width: 45%;
+}
+
+.diferenciales > div > ul > li {
+    font-size: x-large;
+    padding: 5px 0;
+}
+
+.exhibicion {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.exhibicion > iframe {
+    min-width: 60%;
+    max-width: 100%;
+    border-radius: 15px;
+    margin-top: 35px;
+    margin-bottom: 10px;
 }
 
 /* PRODUCTOS */
@@ -212,7 +264,6 @@ footer > img {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 35px;
     max-width: 90%;
     margin: auto;
 }
@@ -265,12 +316,12 @@ footer > img {
 
 /* CONTACTO */
 .formulario {
-    padding-top: 35px;
     display: flex;
     flex-direction: column;
-    width: 80%;
-    max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
+    background: -webkit-linear-gradient(#cccccc, #e7e7e7, #cccccc);
+    background: linear-gradient(#cccccc, #e7e7e7, #cccccc);
 }
 
 .formulario > form > ul {
@@ -289,7 +340,7 @@ footer > img {
 }
 
 .formulario > form > ul > li label {
-    font-weight: bold;
+    font-size: 19px;
     padding: 8px;
 }
 
@@ -316,7 +367,7 @@ footer > img {
     align-items: flex-end;
     list-style-type: none;
     max-width: 790px;
-    margin: 10px auto 35px auto;
+    margin: 10px auto 0 auto;
 }
 
 .newsletter-submit > div {
@@ -368,7 +419,6 @@ footer > img {
 }
 
 .horarios {
-    padding: 0 0 45px 0;
     display: flex;
     flex-direction: column;
     width: 80%;
@@ -395,7 +445,7 @@ footer > img {
 }
 
 
-/* Media queries */
+/* MEDIA QUERIES */
 @media screen and (max-width: 700px) {
     header > img {
         -webkit-filter: blur(2px) brightness(45%);
@@ -418,14 +468,18 @@ footer > img {
         width: 47px;
     }
 
-    .acerca-de {
-        padding: 35px 0;
+    .acerca-de > div {
+        width: auto;
+        max-width: 100%;
     }
-    
-    .acerca-de > p {
-        text-align: center;
-        padding: 20px 0;
-        max-width: 80%;
+
+    .diferenciales div {
+        min-width: 60%;
+        max-width: 100%;
+    }
+
+    .diferenciales > div > ul > li {
+        font-size: large;
     }
 }
 
