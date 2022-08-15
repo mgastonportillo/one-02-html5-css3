@@ -10,9 +10,6 @@
 <body>
 
     <header>
-
-        <!-- <div id="banner"></div> -->
-
         <img src="/assets/img/banner.webp" alt="Banner" id="img-header">
         <div id="header-real">
             <img src="/assets/img/logo.svg" alt="Logo" class="filter-white">
@@ -22,39 +19,62 @@
                 <li><a href="contacto.html" data-content="Contacto">Contacto</a></li>
             </ul>
         </div>
-
     </header>
 
-    <div class="formulario">
-        <h2>Contacto</h2>
-        <form action="">
-                <ul class="contenedor-entradas">
-                    <li>
-                        <label for="nombre-apellido">Nombre y apellido</label>
-                        <input type="text" name="nombre-apellido" id="nombre-apellido" placeholder="Ingrese su nombre y su apellido">
-                    </li>
-                    <li>
-                        <label for="email">Correo electrónico</label>
-                        <input type="text" name="email" id="email" placeholder="Ingrese su dirección de email">
-                    </li>
-                    <li>
-                        <label for="telefono">Teléfono</label>
-                        <input type="text" name="telefono" id="telefono" placeholder="Ingrese su número de teléfono">
-                    </li>
-                    <li>
-                        <label for="mensaje">Mensaje</label>
-                        <textarea type="text" name="mensaje" id="mensaje" rows="6" placeholder="Ingrese su mensaje"></textarea> 
-                    </li>
-                </ul>
-                <div class="entradas-bottom">
-                    <div id="nl-flex">
-                        <label for="newsletter" id="nl-label">¿Le gustaría recibir noticias sobre la barbería?</label>
-                        <input type="checkbox" name="newsletter" id="newsletter"></checkbox> 
+    <main>
+        <div class="formulario">
+            <h2>Contacto</h2>
+            <form action="">
+                    <ul>
+                        <li>
+                            <label for="nombre-apellido">Nombre y apellido</label>
+                            <input type="text" required name="nombre-apellido" id="nombre-apellido" placeholder="Ingrese su nombre y su apellido">
+                        </li>
+                        <li>
+                            <label for="email">Correo electrónico</label>
+                            <input type="email" required name="email" id="email" placeholder="Ingrese su dirección de email">
+                        </li>
+                        <li>
+                            <label for="telefono">Teléfono</label>
+                            <input type="tel" name="telefono" id="telefono" placeholder="Ingrese su número de teléfono">
+                        </li>
+                        <li>
+                            <label for="mensaje">Mensaje</label>
+                            <textarea type="text" required name="mensaje" id="mensaje" rows="6" placeholder="Ingrese su mensaje"></textarea> 
+                        </li>
+                    </ul>
+                    <div class="newsletter-submit">
+                        <div>
+                            <label for="newsletter">¿Le gustaría recibir noticias sobre la barbería?</label>
+                            <input type="checkbox" checked name="newsletter" id="newsletter"></checkbox> 
+                        </div>
+                        <button type="submit" data-content="Enviar">Enviar</button>
                     </div>
-                    <button type="submit" data-content="Enviar">Enviar</button>
-                </div>
-        </form>
-    </div>
+            </form>
+        </div>
+
+        <div class="horarios">
+            <h2>Horarios de atención</h2>
+            <table>
+                <tr>
+                    <th>Día</th>
+                    <th>Horario</th>
+                </tr>
+                <tr>
+                    <td>Lunes</td>
+                    <td>08hs - 20hs</td>
+                </tr>
+                <tr>
+                    <td>Miércoles</td>
+                    <td>08hs - 20hs</td>
+                </tr>
+                <tr>
+                    <td>Viernes</td>
+                    <td>08hs - 20hs</td>
+                </tr>
+            </table>
+        </div>
+    </main>
 
     <footer>
         <img src="/assets/img/gale.svg" class="filter-white" alt="gale">
