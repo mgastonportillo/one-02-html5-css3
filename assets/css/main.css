@@ -452,6 +452,10 @@ footer > img {
 
 /* MEDIA QUERIES */
 @media screen and (max-width: 700px) {
+    section {
+        padding: 30px;
+    }
+
     header > img {
         -webkit-filter: blur(2px) brightness(45%);
         filter: blur(2px) brightness(45%);
