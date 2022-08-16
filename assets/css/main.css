@@ -231,7 +231,7 @@ footer > img {
 }
 
 .diferenciales > div > ul {
-    padding-left: 50px;
+    padding-left: 20px;
     margin: auto 0;
     max-width: 50%;
     font-size: medium;
@@ -240,8 +240,14 @@ footer > img {
 }
 
 .diferenciales > div > ul > li {
+    list-style-type: none;
     font-size: x-large;
     padding: 5px 0;
+}
+
+.diferenciales > div > ul > li:before {
+    content: "★";
+    padding-right: 20px;
 }
 
 .exhibicion {
@@ -487,5 +493,9 @@ footer > img {
 
     .formulario > form > ul > li > label {
         font-size: medium;
+    }
+
+    .diferenciales > div > ul > li:before {
+        padding-right: 10px;
     }
 }
