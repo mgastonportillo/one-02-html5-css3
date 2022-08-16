@@ -226,7 +226,7 @@ footer > img {
 .diferenciales > div > img {
     max-width: 50%;
     object-fit: cover;
-    border-radius: 20px;
+    border-radius: 15px;
     box-shadow: rgba(0, 0, 0, 0.7);
 }
 
@@ -484,7 +484,7 @@ footer > img {
     }
 
     .diferenciales > div > ul > li {
-        font-size: large;
+        font-size: medium;
     }
     
     .horarios > table {
